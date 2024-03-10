@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+  nginx:
+    image: cr.yandex/crpvc64qpcdbh5lbtlav/dt/vpn/bot/nginx:0.0.1
+    ports:
+      - "443:443" 
+      - "80:80" 
+    #restart: always
+    # volumes:
+    #   - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+    #   - ./ssl/site.crt:/etc/ssl/certs/site.crt
+    #   - ./ssl/site.dec.key:/etc/ssl/private/site.dec.key
+  bot:
+    image: cr.yandex/crpvc64qpcdbh5lbtlav/dt/vpn/bot/app:0.0.1
+    ports:
+    - "8080:8080"
