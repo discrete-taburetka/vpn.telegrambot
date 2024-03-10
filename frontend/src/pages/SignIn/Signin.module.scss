@@ -1,0 +1,28 @@
+@use '../../stylesheets/mixins' as *;
+
+.signin {
+  @include indents(0 20px 40px, 0);
+  @include flex(column, center, center, 8px);
+  @include size(100%, 100%);
+
+  &__title, &__text {
+    color: var(--tg-theme-text-color);
+  }
+
+  &__title {
+    @include indents(20px, 0);
+    text-align: center;
+  }
+
+  &__text {
+    @include indents(20px, 0);
+    text-align: center;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: var(--tg-theme-link-color);
+    cursor: pointer;
+    font-weight: 700;
+  }
+}

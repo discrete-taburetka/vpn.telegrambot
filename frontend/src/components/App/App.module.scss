@@ -1,0 +1,12 @@
+@use '../../stylesheets/mixins' as *;
+
+* {
+  @include indents();
+  box-sizing: border-box;
+}
+
+.app {
+  @include size($height: 100vh);
+  background-color: var(--tg-theme-bg-color);
+  color: var(--tg-theme-text-color);
+}

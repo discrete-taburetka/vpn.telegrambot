@@ -1,0 +1,17 @@
+@use '../../stylesheets/mixins' as *;
+
+.form {
+  @include indents(0, 16px 0);
+  @include flex(column, center, center, 8px);
+  @include size(100%, 40%);
+
+  &__input {
+    @include indents(16px, 0);
+    @include size(100%, unset);
+    min-width: 290px;
+    color: var(--tg-theme-text-color);
+    background-color:  var(--tg-theme-section-bg-color);
+    border: 1px var(--tg-theme-accent-text-color) solid;
+    border-radius: 10px;
+  }
+}
