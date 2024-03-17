@@ -1,0 +1,31 @@
+@hostname = localhost
+@port = 8080
+@host = {{hostname}}:{{port}}
+@contentType = application/json
+
+POST http://{{host}}/adduser
+Content-Type: {{contentType}}
+
+{
+	"tg_user_name": "td_id_2",
+	"user_name": "tg_user_2",
+    "user_password": "tg_pwd_2",
+    "user_email": "tg_user_2@mail.com"
+}
+
+###
+GET http://{{host}}/hello
+
+###
+GET http://{{host}}/allusers
+
+###
+DELETE  http://{{host}}/user
+Content-Type: {{contentType}}
+
+{
+	"tg_user_name": "td_id_2",
+	"user_name": "tg_user_2",
+    "user_password": "tg_pwd_2",
+    "user_email": "tg_user_2@mail.com"
+}
